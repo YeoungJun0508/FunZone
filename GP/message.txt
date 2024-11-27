@@ -1,0 +1,38 @@
+수정 사항
+1. 전반적인 폴더 구조 및 파일 이름 일부 변경
+2. 단일 페이지 => 다중 페이지 분리
+3. 여자 연예인 사진 확장자명이 달라서(png, jpeg) 그룹화 제대로 되지 않는 문제 => 해결
+4. 닮은 연예인 성별 변경 시 업로드 이미지 초기화 => 직접 촬영은 실패
+5. pydino main()이름 main_menu()로 변경
+6. pydino 게임 설명 추가
+7. mazestart.py(기존 maze.py) 게임 방법 추가 
+
+
+폴더 구조
+├── pages # 페이지 폴더
+│ ├── celebrity.py # 닮은 연예인 찾기 파일
+│ ├── dino.py # 공룡 게임
+│ ├── maze.py # 미로 파일
+│ └── mbtichat.py # mbti 챗봇 파일
+├── fuc # 각 페이지에 필요한 함수 및 파일 저장 폴더
+│ └── facenet # 닮은 연예인 필요 파일 폴더
+│ └── Lang # 챗봇 필요 파일 폴더
+│ └── m_similarity_facial.py
+│ └── mazestart.py
+│ └── mbtichatbot.py
+│ └── pydino.py
+│ └── w_similarity_facial.py
+├── img # 프로그램 실행에 필요한 이미지를 모두 저장한 폴더
+│ └── Assets # 공룡 게임 이미지 폴더
+│ └── m_img # 닮은 연예인 남자 이미지
+│ └── m_img_mtcnn # mtcnn 이미지
+│ └── maze # 미로 필요 이미지
+│ └── w_img # 닮은 연예인 여자 이미지
+│ └── w_img_mtcnn # mtcnn 이미지
+│ └── (이하 메인 페이지 이미지)
+└── mainpage.py
+
+pip list --format=freeze > requirements.txt
+필요 모듈 설치: pip install -r requirements.txt
+
+fuc/mbtichatbot GOOGLE_API_KEY 입력
